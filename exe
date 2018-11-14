@@ -1,0 +1,5 @@
+#!/usr/bin/perl
+# exe
+print '-' x 80, "\n$0\n";
+print join ' ', keys %ENV;
+print "\n";

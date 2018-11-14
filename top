@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+# top
+print '-' x 80, "\n$0\n";
+print join ' ', keys %ENV;
+print "\n";
+
+######
+
+print '-' x 80, "\n$0\n";
+{local $ENV{sadf} = 'asd';}
+print join ' ', keys %ENV;
+print "\n";
+
+if( -x './exe' ) {
+        local %ENV;
+        %ENV = qw( aa 1 bb 2 cc 3 dd 4 );
+        system('./exe');
+}
+
+print '-' x 80, "\n$0\n";
+print join ' ', keys %ENV;
+print "\n";
